@@ -1,3 +1,6 @@
 [submodule "toggle-button"]
 	path = toggle-button
 	url = https://github.com/chaochaocodes/toggle-button.git
+[submodule "card-ui"]
+	path = card-ui
+	url = https://github.com/chaochaocodes/card-ui.git

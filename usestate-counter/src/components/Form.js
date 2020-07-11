@@ -14,7 +14,6 @@ const Form = () => {
         setCount(prev => prev + 1)
     }
 
-
     return (
         <div>
             <div className="stats">

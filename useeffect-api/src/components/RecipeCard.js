@@ -23,7 +23,7 @@ const RecipeCard = ({data, getIngredients, getMeasurements}) => {
                         {ingredientList}
                     </div>
                 </div>
-                <p className="glass"> Glass: {data.strGlass} </p>
+                <p> <strong> Glass: </strong> {data.strGlass} </p>
                 <h3> Directions </h3>
                 {data.strInstructions}
             </div>

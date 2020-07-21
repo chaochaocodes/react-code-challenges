@@ -3,31 +3,6 @@ body {
   font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 
-.card-ui {
-  background-color: white;
-  border-radius: 1px;
-	box-shadow: 0 0 2px -1px rgba(0, 0, 0, 0.75);
-  height: 350px;
-  margin: 0 auto;
-  max-width: 600px;
-  display: flex;
-}
-
-img {
-  background-position: center;
-  background-size: cover;
-  height: 350px;
-  /* overflow: visible; */
-  /* position: relative; */
-}
-
-.card-body {
-  color: grey;
-  width: 100%;
-  padding: 20px 20px 50px;
-  display: relative;
-}
-
 h1 {
   text-align: center;
 }
@@ -41,18 +16,4 @@ h2 {
 
 li {
   margin: 3px;
-}
-
-.divider {
-  background: grey;
-  height: 2px;
-  margin: 25px auto;
-  width: 40px;
-}
-
-.card-btn {
-  margin-left: auto;
-  margin-top: 10px;
-  margin-bottom: 0;
-  display: relative;
 }

@@ -1,7 +1,7 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import './cardui.css'
 
-const CardUI = ({data, getIngredients, callAPI}) => {
+const CardUI = ({data, getIngredients, callAPI, toggleRecipe}) => {
 
     const ingredientList = getIngredients(data).map((item, index) =>
         <li key={index.toString()}> {item.charAt(0).toUpperCase() + item.slice(1)}</li>);
@@ -19,9 +19,12 @@ const CardUI = ({data, getIngredients, callAPI}) => {
                 <p> Ingredients </p>
                 {ingredientList}
                 <button className="card-btn" onClick={ () => callAPI() }> 
-                {'>'}
+                    {'>'}
                 </button>
-                {/* <button className="card-btn"> Show Recipe </button> */}
+                <button className="card-btn" 
+                    onClick={toggleRecipe}>
+                    Recipe 
+                </button>
             </div>
         </div>
         </>

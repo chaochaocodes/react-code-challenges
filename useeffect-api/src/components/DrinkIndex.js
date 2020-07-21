@@ -9,29 +9,45 @@ const DrinkIndex = () => {
     const abc = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p',
     'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z']
     
-    const allDrinks = []
+    // const allDrinks = []
+    // const getAllDrinks = () => abc.forEach(letter => {
+    //     fetch(INDEX_URL+`${letter}`)
+    //     .then(res => res.json())
+    //     .then(res => {
+    //         console.log('------ LETTER', letter);
+    //         if (res.drinks !== null) allDrinks.push(res.drinks)
+    //         console.log('------- setINDEX', allDrinks)
+    //         setIndex(allDrinks)
+    //     })
+    // })
+
     const getAllDrinks = () => abc.forEach(letter => {
-        fetch(INDEX_URL+`${letter}`)
-        .then(res => res.json())
-        .then(res => {
-            console.log('------ LETTER', letter);
-            if (res.drinks !== null) allDrinks.push(res.drinks)
-            console.log(allDrinks)
-            setIndex(allDrinks)
+        let APICall = fetch(INDEX_URL+`${letter}`);
+
+        Promise.all([APICall])
+        .then(response => Promise.all(response.map(res => res.json())))
+        .then(result => {
+            if (result[0].drinks !== null) index.push(result[0].drinks)
+            setIndex(index)
+            console.log('==== setIndex', index)
         })
     })
 
-    useEffect(()=> {
-       getAllDrinks()
-    },[setIndex])
+    useEffect(() => {
+        getAllDrinks()
+    },[])
 
+    const indexList = (index) => {
+        console.log('WHERE IS INDEX??? ----', index)
+    }
 
-    const indexList = () => allDrinks.map(function(subarray) {
-        return subarray.map(function(name) {
-            console.log(name.strDrink)
-            return name.strDrink
-        })
-    })
+    // const indexList = () => {
+    //     index.map( (subarray) => {
+    //         return subarray.map( (item)=> {
+    //             return <div>{item.strDrink}</div>
+    //         })
+    //     })
+    // }
     
     // const indexList = (index).map(function(subarray) => 
     //     <a href="" > {item.strDrink} </a>)
@@ -39,7 +55,7 @@ const DrinkIndex = () => {
     return (
         <div className="drink-index">
             <h3>{abc[0].toUpperCase()}</h3>
-            {indexList()}
+            {indexList(index)}
         </div>
     )
     

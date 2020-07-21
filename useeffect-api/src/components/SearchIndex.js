@@ -1,13 +1,6 @@
 import React, { useState, useEffect } from "react";
 
-// API List all cocktails by first letter
-// https://www.thecocktaildb.com/api/json/v1/1/search.php?f=a
-// map through alphabet
-// fetch each letter => display index by Letter
-
-const abc = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p',
-'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z']
-
+// test data
 const name = [
   "Margarita",
   "Blue Margarita",
@@ -34,7 +27,7 @@ const Index = () => {
   }, [searchTerm]);
 
   return (
-    <div className="Index">
+    <div className="search-function">
       <input
         type="text"
         placeholder="Search"

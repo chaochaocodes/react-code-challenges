@@ -21,9 +21,9 @@ const CardUI = ({data, getIngredients, callAPI, toggleRecipe}) => {
                 <button className="card-btn" onClick={ () => callAPI() }> 
                     {'>'}
                 </button>
-                <button className="card-btn" 
+                <button className="recipe-btn"  
                     onClick={toggleRecipe}>
-                    Recipe 
+                    Recipe
                 </button>
             </div>
         </div>

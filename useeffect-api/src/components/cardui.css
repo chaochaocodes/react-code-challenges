@@ -1,11 +1,12 @@
 .card-ui {
     background-color: white;
     border-radius: 1px;
-      box-shadow: 0 0 2px -1px rgba(0, 0, 0, 0.75);
+    box-shadow: 0 0 2px -1px rgba(0, 0, 0, 0.75);
     height: 350px;
     margin: 0 auto;
     max-width: 600px;
     display: flex;
+    position: relative;
   }
   
   .media > img {
@@ -20,7 +21,6 @@
     color: grey;
     width: 100%;
     padding: 20px 20px 50px;
-    display: relative;
     overflow: scroll;
   }
   
@@ -31,9 +31,13 @@
     width: 40px;
   }
   
-  .card-btn {
-    margin-left: auto;
-    margin-top: 10px;
-    margin-bottom: 0;
-    display: relative;
+  .card-body .card-btn {
+    position: absolute;
+    right: 15px;
+    bottom: 15px;
+  }
+  .card-body .recipe-btn {
+    position: absolute;
+    right: 45px;
+    bottom: 15px;
   }

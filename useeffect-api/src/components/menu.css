@@ -1,0 +1,42 @@
+.menu-btn {
+    background-color: grey; 
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.menu-btn > button {
+    width: 33.33%;
+    /* background: transparent; */
+    border: none;
+    font-size: 16px;
+    outline: none;
+    position: relative;
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+}
+
+.menu-btn > button:before {
+    content: '';
+    border-bottom: 1px solid #000;
+    padding: 0 10px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    width: 0;
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+  }
+.menu-btn > button:hover:before {
+    width: 100%;
+    padding: 0;
+  }
+.menu-btn > button:active {
+    background: #000;
+    color: #fff;
+    -webkit-transition: none;
+    transition: none;
+  }
+  
+  /* https://codepen.io/franzskuffka/pen/wKLPjo */

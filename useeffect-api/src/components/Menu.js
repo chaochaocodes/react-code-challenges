@@ -1,14 +1,14 @@
 import React from 'react';
 import './menu.css'
 
-const Menu = () => {
+const Menu = ({toggleIndexButton, toggleLearnButton}) => {
 
     return(
         <div className="menu-btn">
-            <button> INDEX </button>
-            <button> CATEGORY </button>
-            <button> SEARCH </button>
-            <button> LEARN </button>
+            <button onClick={toggleIndexButton}> INDEX </button>
+            <button > CATEGORY </button>
+            <button > SEARCH </button>
+            <button onClick={toggleLearnButton}> LEARN </button>
         </div>
     )
 }

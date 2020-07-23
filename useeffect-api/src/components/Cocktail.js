@@ -15,7 +15,7 @@ const Cocktail = () => {
 
     useEffect( () => {
         if (hasFetched === false ) callAPI() ;
-    })
+    }, [setState])
 
     const callAPI = () => {
         fetch(RANDOMIZE)

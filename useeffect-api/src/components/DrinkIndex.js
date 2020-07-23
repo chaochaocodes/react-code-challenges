@@ -14,9 +14,9 @@ const DrinkIndex = () => {
     //     fetch(INDEX_URL+`${letter}`)
     //     .then(res => res.json())
     //     .then(res => {
-    //         console.log('------ LETTER', letter);
+    //         // console.log('------ LETTER', letter);
     //         if (res.drinks !== null) allDrinks.push(res.drinks)
-    //         console.log('------- setINDEX', allDrinks)
+    //         // console.log('------- setINDEX', allDrinks)
     //         setIndex(allDrinks)
     //     })
     // })
@@ -37,26 +37,35 @@ const DrinkIndex = () => {
         getAllDrinks()
     },[])
 
-    const indexList = (index) => {
-        console.log('WHERE IS INDEX??? ----', index)
-    }
+    const indexList = (index).map(subarray => 
+            subarray.map(item => 
+                <div> {item.strDrink} </div>
+        )
+    )
 
     // const indexList = () => {
-    //     index.map( (subarray) => {
-    //         return subarray.map( (item)=> {
-    //             return <div>{item.strDrink}</div>
+    //     let indexArray = []
+    //     indexArray.forEach((subarray) => {
+    //         subarray.forEach((item) => {
+    //             indexArray.push(<div> {item.strDrink} </div> )
     //         })
     //     })
     // }
     
-    // const indexList = (index).map(function(subarray) => 
-    //     <a href="" > {item.strDrink} </a>)
+    // const indexList = (index).map(item => 
+    //      <a href="" > {item.strDrink} </a>)
+
+    const length = (index).map(item => <div> {item.length} </div>)
 
     return (
+        <>
         <div className="drink-index">
             <h3>{abc[0].toUpperCase()}</h3>
-            {indexList(index)}
+            {index.length}
+            {length}
+            {indexList}
         </div>
+        </>
     )
     
 }

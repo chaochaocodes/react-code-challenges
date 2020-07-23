@@ -8,6 +8,7 @@ const Menu = () => {
             <button> INDEX </button>
             <button> CATEGORY </button>
             <button> SEARCH </button>
+            <button> LEARN </button>
         </div>
     )
 }
